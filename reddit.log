@@ -1,0 +1,51 @@
+Finished data loading.
+  NumNodes: 232965
+  NumEdges: 114615892
+  NumFeats: 602
+  NumClasses: 41
+  NumTrainingSamples: 153431
+  NumValidationSamples: 23831
+  NumTestSamples: 55703
+Graph(num_nodes=232965, num_edges=114615892,
+      ndata_schemes={}
+      edata_schemes={})
+feat size: 1
+multi-head spmm FLOPS :  28419982148.116127
+spmm FLOPS :  9242234326.686546
+multi-head spmm FLOPS :  21041405545.789146
+spmm FLOPS :  8089548393.128265
+feat size: 2
+multi-head spmm FLOPS :  52847474569.18827
+spmm FLOPS :  12735089568.510666
+multi-head spmm FLOPS :  39107675482.91856
+spmm FLOPS :  16119383282.482351
+feat size: 4
+multi-head spmm FLOPS :  85991758702.12492
+spmm FLOPS :  21991766722.64596
+multi-head spmm FLOPS :  73057423668.37355
+spmm FLOPS :  32115198290.89386
+feat size: 8
+multi-head spmm FLOPS :  99810755957.8104
+spmm FLOPS :  32145039954.742546
+multi-head spmm FLOPS :  103327559922.51097
+spmm FLOPS :  58421317441.661705
+feat size: 16
+multi-head spmm FLOPS :  107602571323.2994
+spmm FLOPS :  59185244743.392654
+multi-head spmm FLOPS :  138320924426.66275
+spmm FLOPS :  95288434252.71858
+feat size: 32
+multi-head spmm FLOPS :  100926085184.22284
+spmm FLOPS :  91491246764.23547
+multi-head spmm FLOPS :  147360701126.06137
+spmm FLOPS :  156808358264.71957
+feat size: 64
+multi-head spmm FLOPS :  101600880228.47296
+spmm FLOPS :  102775750530.18655
+multi-head spmm FLOPS :  166408554729.8895
+spmm FLOPS :  201536451228.84616
+feat size: 128
+multi-head spmm FLOPS :  100775651107.88745
+spmm FLOPS :  108211419806.99062
+multi-head spmm FLOPS :  185969737726.91275
+spmm FLOPS :  233111482336.3962

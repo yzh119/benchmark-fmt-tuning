@@ -34,6 +34,7 @@ def get_multi_head_spmm_flops(g, num_hid, num_heads):
             accum_FLOPs += g.number_of_edges() * num_heads * num_hid
     g.ndata.clear()
     g.edata.clear()
+    th.cuda.empty_cache()
     return accum_FLOPs / accum_time
 
 def get_spmm_flops(g, num_hid):
@@ -50,6 +51,7 @@ def get_spmm_flops(g, num_hid):
             accum_FLOPs += g.number_of_edges() * num_hid
     g.ndata.clear()
     g.edata.clear()
+    th.cuda.empty_cache()
     return accum_FLOPs / accum_time
 
 def get_multi_head_sddmm_flops(g, num_hid, num_heads):
@@ -66,6 +68,7 @@ def get_multi_head_sddmm_flops(g, num_hid, num_heads):
             accum_FLOPs += g.number_of_edges() * num_heads * num_hid
     g.ndata.clear()
     g.edata.clear()
+    th.cuda.empty_cache()
     return accum_FLOPs / accum_time
 
 def get_sddmm_flops(g, num_hid):
@@ -82,6 +85,7 @@ def get_sddmm_flops(g, num_hid):
             accum_FLOPs += g.number_of_edges() * num_hid
     g.ndata.clear()
     g.edata.clear()
+    th.cuda.empty_cache()
     return accum_FLOPs / accum_time
 
 def benchmark(g, dataset):

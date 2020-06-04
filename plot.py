@@ -31,8 +31,8 @@ if __name__ == '__main__':
     for row, mode in enumerate(['spmm', 'sddmm']):
         filename = 'reddit_{}.csv'.format(mode)
         Xs, coo_gflops, csr_gflops = get_data(filename)
-        axs[row + 1, 0].plot(Xs, coo_gflops, linewidth=1)
-        axs[row + 1, 0].plot(Xs, csr_gflops, linewidth=1)
+        axs[row + 1, 0].plot(Xs, coo_gflops, linewidth=1, label='coo')
+        axs[row + 1, 0].plot(Xs, csr_gflops, linewidth=1, label='csr')
         axs[row + 1, 0].set_yticks([0, 200, 400])
         axs[row + 1, 0].set_xscale('log', basex=2)
         axs[row + 1, 0].set_xticks(Xs)
@@ -48,8 +48,8 @@ if __name__ == '__main__':
         for row, mode in enumerate(['spmm', 'sddmm']):
             filename = 'mesh_{}_{}.csv'.format(k, mode)
             Xs, coo_gflops, csr_gflops = get_data(filename)
-            axs[row + 1, i + 1].plot(Xs, coo_gflops, linewidth=1)
-            axs[row + 1, i + 1].plot(Xs, csr_gflops, linewidth=1)
+            axs[row + 1, i + 1].plot(Xs, coo_gflops, linewidth=1, label='coo')
+            axs[row + 1, i + 1].plot(Xs, csr_gflops, linewidth=1, label='csr')
             axs[row + 1, i + 1].set_yticks([0, 200, 400])
             axs[row + 1, i + 1].set_xscale('log', basex=2)
             axs[row + 1, i + 1].set_xticks(Xs)
@@ -62,8 +62,8 @@ if __name__ == '__main__':
     for row, mode in enumerate(['spmm', 'sddmm']):
         filename = 'ppi_{}.csv'.format(mode, k)
         Xs, coo_gflops, csr_gflops = get_data(filename)
-        axs[row + 1, 5].plot(Xs, coo_gflops, linewidth=1)
-        axs[row + 1, 5].plot(Xs, csr_gflops, linewidth=1)
+        axs[row + 1, 5].plot(Xs, coo_gflops, linewidth=1, label='coo')
+        axs[row + 1, 5].plot(Xs, csr_gflops, linewidth=1, label='csr')
         axs[row + 1, 5].set_yticks([0, 200, 400])
         axs[row + 1, 5].set_xscale('log', basex=2)
         axs[row + 1, 5].set_xticks(Xs)

@@ -21,7 +21,7 @@ def get_data(filename):
     return Xs, coo_gflops, csr_gflops
 
 if __name__ == '__main__':
-    fig, axs = plt.subplots(3, 6, figsize=(8, 3))
+    fig, axs = plt.subplots(3, 2, figsize=(3, 3))
 
     # reddit
     reddit = RedditDataset()
@@ -39,7 +39,7 @@ if __name__ == '__main__':
         axs[2, 0].set_xlabel('reddit')
     
     # mesh
-    for i, k in enumerate([8, 16, 32, 64]):
+    for i, k in enumerate([32]): #enumerate([8, 16, 32, 64]):
         f = open('modelnet40_{}.g'.format(k), 'rb')
         gs = pickle.load(f)
         g = dgl.batch(gs)
@@ -54,6 +54,8 @@ if __name__ == '__main__':
             axs[row + 1, i + 1].set_xscale('log', basex=2)
             axs[row + 1, i + 1].set_xticks(Xs)
             axs[2, i + 1].set_xlabel('mesh {}'.format(k))
+
+    """
     # ppi
     ppi = PPIDataset('train')
     g = ppi.graph
@@ -68,6 +70,7 @@ if __name__ == '__main__':
         axs[row + 1, 5].set_xscale('log', basex=2)
         axs[row + 1, 5].set_xticks(Xs)
     axs[2, 5].set_xlabel('ppi'.format(k))
+    """
 
     axs[0, 0].yaxis.set_label_position("left")
     axs[0, 0].set_ylabel('degree distribution')
